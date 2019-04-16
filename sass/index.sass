@@ -1,0 +1,309 @@
+@font-face
+  font-family: "Samplino" , serif
+  src: url('/assets/fonts/ptsanscaption.ttf')
+
+html
+  height: 100%
+
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
+  margin: 0
+  min-width: 858px
+  font-family: sans-serif
+*
+  box-sizing: border-box
+.wt
+  color: white
+#navigator
+  position: fixed
+  top: calc(50% - 48px)
+  display: flex
+  flex-direction: column
+  right: 3%
+  z-index: 200
+  @media (max-width: 859px)
+    position: fixed
+    top: 1%
+    flex-direction: row
+    left: calc(50% - 48px)
+    right: auto
+
+#navigator a
+  display: block
+  margin: 10px
+  width: 12px
+  height: 12px
+  background-color: white
+  border: 1px solid white
+  border-radius: 50%
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+
+
+#navigator a.current
+  background-color: rgba(0,0,0,0.8)
+
+.main
+  flex: 1 0 auto
+  align-content: center
+  margin: 0 auto
+  width: 100%
+
+.container
+  display: flex
+  flex-wrap: wrap
+  width: 90%
+  max-width: 1104px
+  min-width: 828px
+  margin: 0 auto
+  @media (max-width: 858px)
+    margin: auto 15.5px
+
+$columns: 12
+@for $i from 1 through $columns
+  .col-#{$i}
+    width: 8.33333333333333% * $i
+    padding: 0 6px
+    @media (max-width: 924px)
+      padding: 0 4.5px
+
+
+@for $i from 1 through $columns
+  .offset-#{$i}
+    margin-left: calc(8.33333333333333% * #{$i})
+    @media (max-width: 924px)
+      margin-left: calc(8.33333333333333% * #{$i})
+
+.button-wrapper
+  text-align: center
+  .button-green
+    display: inline-block
+    background: #61B818
+    border-radius: 4px
+    padding: 15px 42px
+    font-weight: bold
+    outline: none
+    border: none
+    font-size: 21px
+
+.background
+  background: aqua
+  height: 40px
+
+.background-red
+  background: red
+  width: 100%
+  height: 100%
+
+#page1
+  background-image: url('../img/background1.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: auto
+  .logo-wrapper-wrapper
+    padding-top: 24px
+    .logo-wrapper
+      padding-top: 3px
+    .logo-wrapper-text
+      padding-left: 5px
+      font-size: 15px
+      vertical-align: top
+      font-weight: bold
+  .action-end-date-wrap
+    text-align: center
+    .action-end-date
+      display: inline-block
+      padding-top: 32px
+      font-size: 14px
+      font-weight: bold
+      word-spacing: 3px
+      letter-spacing: 0.4px
+  h1
+    text-align: center
+    padding-top: 43px
+    font-size: 78px
+    line-height: 80px
+    word-spacing: 10px
+  .form-wrapper
+    border-radius: 6px
+    margin-top: -1px
+    height: 125px
+    #domain-search-form
+      background: white
+      padding: 15px 0
+      border-radius: 7px
+      display: flex
+      justify-content: space-between
+      .domain-input
+        outline: none
+        border: none
+        padding-left: 35px
+        font-size: 24px
+        color: #1d1d1d
+        width: 100%
+      .submit-button
+        background: #636363
+        padding: 12px 25px
+        margin-right: 15px
+        border-radius: 6px
+        font-size: 22px
+        border: none
+        outline: none
+    .domain-search-result
+      text-align: center
+      padding: 13px 0
+      border-bottom-left-radius: 7px
+      border-bottom-right-radius: 7px
+      background: rgba(51, 51, 51, 0.5)
+      .domain-link
+        color: #35c800
+  .button-wrapper
+    margin-top: 35px
+  .scroll-down
+    text-align: center
+    margin-top: 139px
+    margin-bottom: 56px
+
+#page2
+  background: white
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  .profit-wrap
+    text-align: center
+    font-size: 20px
+    padding-top: 30px
+  .logo-wrapper-wrapper2
+    margin-top: 24px
+    .logo-wrapper2
+      margin-top: 3px
+    .logo-wrapper-text2
+      margin-left: 6px
+      font-size: 15px
+      vertical-align: top
+  .card
+    text-align: center
+    margin-top: 56px
+    margin-left: 8px
+  .card2
+    margin: 33px 6px 0px 15px
+    text-align: center
+  .card-text
+    text-align: center
+    font-size: 18px
+    p
+      margin-top: 15px
+  .selected
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      border: 10px solid transparent
+      border-bottom: 10px solid #F7F7F7
+      bottom: -15px
+      left: 47%
+      z-index: 1
+    &:before
+      content: ''
+      position: absolute
+      bottom: -13px
+      border: 10px solid transparent
+      border-bottom: 10px solid black
+      left: 47%
+  .free-text
+    background-color: #F7F7F7
+    position: relative
+    border: 1px solid black
+    border-radius: 7px
+    padding: 10px 11px 16px 44px
+    font-size: 15px
+    margin-top: 13px
+  .button-wrapper
+    margin-top: 17px
+  .down
+    margin-bottom: 86px
+  .slide2
+    margin-top: 30px
+#page3
+  background-image: url('../img/background2.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: auto
+
+  .logo-wrapper-wrapper3
+    margin-top: 26px
+  .logo-wrapper-text3
+    padding-left: 6px
+    font-size: 15px
+  h3
+    font-size: 32px
+    margin-top: 55px
+    margin-left: -76px
+  h4
+    font-size: 50px
+    text-align: center
+    margin-top: 55px
+
+
+
+  .create-account3
+    display: inline-block
+    background: #61B818
+    border-radius: 4px
+    font-weight: bold
+    outline: none
+    border: none
+    font-size: 21px
+    text-align: center
+    padding: 15px 14px 14px 16px
+    margin-top: -28px
+  .slide3
+    margin-top: -17px
+
+  .sales
+    align-items: center
+    background-color: #ff0d55
+    padding: 20px
+    margin-top: 54px
+    border-radius: 7px
+    font-size: 17px
+    display:  flex
+    max-height: 110px
+    max-width: 1096px
+    justify-content: space-between
+  .numb
+    display: inline-block
+    max-width: 800px
+    font-size: 21px
+    padding-left: 25px
+    .numb2
+      display: inline-block
+  #plus
+    height: 31px
+  #number
+    font-size: 60px
+    padding-right: 14px
+
+  #left-text
+    display: inline-block
+    font-size: 20px
+    max-width: 762px
+    margin-left: 19px
+    border-right: 1px solid
+    border-color: #ffffff59
+  #rigth-text
+    display: inline-block
+    font-size: 54px
+    margin-right: 26px
+  .footer
+    margin-top: 47px
+    font-size: 13px
+    color: #9ecbf6
+    margin-bottom: 53px
+
+
+
+
